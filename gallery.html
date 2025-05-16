@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery</title>
+ <!--<link rel="stylesheet" href="styles/popup.css.css">-->
+
+<link rel="stylesheet" href="styles/style.css">
+<!-- <link rel="stylesheet" href="styles/gallery.css">-->
+
+</head>
+<body class="gallery-page">
+
+  <header class="site-header">
+    <div class="header-left">
+      <img src="images/logo.jpg" alt="Logo" class="header-logo">
+      <span class="site-title">Affordable Art</span>
+    </div>
+
+    <nav class="header-middle">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-right">
+      <a href="selections.html" class="cart-link">
+        <img src="images/cart-icon.png" alt="Cart" class="cart-icon">
+      </a>
+    </div>
+  </header>
+  
+  
+  
+
+
+ 
+<div class="gallery">
+ <h1 class="gallery-header">Art Gallery</h1>
+
+ <div class="gallery-grid" id="gallery"></div>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closePopup()">×</button>
+      <img id="popup-img" src="" alt="Full View" />
+      <h2 id="popup-title"></h2>
+      <p id="popup-description"></p>
+
+      <form id="comment-form">
+        <!--<h3>Leave a comment</h3>-->
+        <input type="email" id="visitor-email" placeholder="Your email" required />
+        <input type="text" id="visitor-name" placeholder="Your name" required />
+        <textarea id="visitor-comment" placeholder="Your comment" rows="3" required></textarea>
+        <button type="submit" class="back-btn">Submit Comment</button>
+      </form>
+      <button id="select-picture-btn" class="select-btn">Select This Picture</button>
+  <!--<button type="button" class="select-btn" onclick="selectPicture()">Select This Picture</button>-->
+  <div id="comment-message"></div>
+      <p id="select-message" style="color: green; margin-top: 10px;"></p>
+
+      <p id="comment-message" style="color: green; margin-top: 10px;"></p>
+      
+  <!--<button class="back-btn" onclick="closePopup()">Back to Gallery</button>-->
+    </div>
+  </div>
+  <div class="gallery-controls">
+    <button onclick="prevPage()">Previous on top</button>
+    <a href="index.html" class="back-home-btn">⬅ Back to Home</a>
+    <button onclick="nextPage()">Next on top</button>
+  </div>
+  <!--
+  <div class="back-home-container">
+    <a href="index.html" class="back-home-btn">⬅ Back to Home</a>
+  </div>
+  -->
+
+  <script src="scripts/selections.js"></script>
+  <script src="scripts/gallery.js"></script>
+</body>
+</html>

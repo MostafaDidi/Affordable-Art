@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      padding: 2rem;
+    }
+
+    .contact-form-wrapper {
+      background: #fdfdfd;
+      border: 1px solid #ccc;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .contact-form-wrapper h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-form-wrapper label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form-wrapper input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      box-sizing: border-box;
+    }
+
+    .contact-form-wrapper button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .contact-form-wrapper button:hover {
+      background-color: #005fa3;
+    }
+
+    #contactMsg {
+      margin-top: 1rem;
+      text-align: center;
+      color: green;
+    }
+  </style>
+</head>
+<body class="contact-page">
+
+
+ <header class="site-header">
+    <div class="header-left">
+      <img src="images/logo.jpg" alt="Logo" class="header-logo">
+      <span class="site-title">Affordable Art</span>
+    </div>
+
+    <nav class="header-middle">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-right">
+      <a href="selections.html" class="cart-link">
+        <img src="images/cart-icon.png" alt="Cart" class="cart-icon">
+      </a>
+    </div>
+  </header>
+
+  <main class="contact-container">
+    <div class="contact-form-wrapper">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label>
+          Name:
+          <input type="text" id="contactName" required />
+        </label>
+        <label>
+          Address:
+          <input type="text" id="contactAddress" required />
+        </label>
+        <label>
+          Email:
+          <input type="email" id="contactEmail" required />
+        </label>
+        <label>
+          Phone:
+          <input type="tel" id="contactPhone" required />
+        </label>
+        <button type="submit">Send</button>
+      </form>
+      <div id="contactMsg"></div>
+    </div>
+  </main>
+
+  <script>
+    
+    // Form handler
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("contactMsg").innerText = "Thank you! Your message has been received.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
