@@ -1,0 +1,75 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Fixed Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Left Section */
+.header-left {
+  display: flex;
+  align-items: center;
+  
+}
+
+.site-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Middle Section */
+.header-middle {
+  display: flex;
+  gap: 20px;
+}
+
+.header-middle a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.header-middle a:hover {
+  text-decoration: underline;
+}
+
+/* Right Section */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  height: 20px;
+}
