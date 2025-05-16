@@ -1,4 +1,4 @@
-const pictures = [
+window.pictures = [
     { id: "b1", name: "Artwork 1", description: "Description for artwork 1" },
     { id: "b2", name: "Artwork 2", description: "Description for artwork 2" },
     { id: "b3", name: "Artwork 3", description: "Description for artwork 3" },
