@@ -1,6 +1,6 @@
 
 let storedPictures = JSON.parse(localStorage.getItem("pictures"));
-let pictures = storedPictures || window.pictures;  // uses your picture.js data if no localStorage
+pictures = storedPictures || window.pictures;  // uses your picture.js data if no localStorage
 
 const galleryDiv = document.getElementById("gallery");
 const popup = document.getElementById("popup");
