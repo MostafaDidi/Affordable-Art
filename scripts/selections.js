@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
     const visitors = JSON.parse(localStorage.getItem("visitors")) || [];
    
-    const storedPictures = JSON.parse(localStorage.getItem("pictures"));
-    const pictures = storedPictures || window.pictures || [];
+let storedPictures = JSON.parse(localStorage.getItem("pictures"));
+let pictures = storedPictures || window.pictures;;
 
   
     if (visitors.length === 0) {
