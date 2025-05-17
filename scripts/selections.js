@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("selections-list");
   
     const visitors = JSON.parse(localStorage.getItem("visitors")) || [];
-    const pictures = JSON.parse(localStorage.getItem("pictures")) || [];
+   
+    const storedPictures = JSON.parse(localStorage.getItem("pictures"));
+    const pictures = storedPictures || window.pictures || [];
+
   
     if (visitors.length === 0) {
       container.innerHTML = "<p>No selections yet.</p>";
